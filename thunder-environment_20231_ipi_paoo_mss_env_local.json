@@ -1,0 +1,16 @@
+{
+    "client": "Thunder Client",
+    "environmentName": "20231_ipi_paoo_mss_env_local",
+    "dateExported": "2023-05-03T20:44:50.135Z",
+    "version": "1.0",
+    "variables": [
+        {
+            "name": "MSS_LEMBRETES_PORTA",
+            "value": "4000"
+        },
+        {
+            "name": "MSS_LEMBRETES_HOST",
+            "value": "localhost"
+        }
+    ]
+}

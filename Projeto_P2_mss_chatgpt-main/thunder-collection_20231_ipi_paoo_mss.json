@@ -1,0 +1,122 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "20231_ipi_paoo_mss",
+    "dateExported": "2023-05-03T20:44:39.663Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "371715ce-d78d-467b-8c4f-ff97276ea9a1",
+            "name": "Lembretes",
+            "containerId": "",
+            "created": "2023-03-29T20:18:38.534Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "7610d4d8-181e-4681-8241-c3f6171f75da",
+            "name": "Observacoes",
+            "containerId": "",
+            "created": "2023-03-29T20:18:57.598Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "602d0de3-ae0b-44ea-a6c4-a6f599ed76be",
+            "name": "Consulta",
+            "containerId": "",
+            "created": "2023-05-03T20:33:03.587Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "f3876997-0ed0-4d64-9a2f-b1d4e3131254",
+            "colId": "ca5df11c-5893-48a2-b7c3-5aeb8992372e",
+            "containerId": "371715ce-d78d-467b-8c4f-ff97276ea9a1",
+            "name": "Salvar_Lembretes",
+            "url": "localhost:4000/lembretes",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2023-03-29T20:20:44.653Z",
+            "modified": "2023-05-03T20:37:24.151Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"texto\": \"{{#string}}\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f1060c99-e452-4850-8f69-df4e18effacd",
+            "colId": "ca5df11c-5893-48a2-b7c3-5aeb8992372e",
+            "containerId": "371715ce-d78d-467b-8c4f-ff97276ea9a1",
+            "name": "Obter_Lembretes",
+            "url": "localhost:4000/lembretes",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-03-29T20:21:44.368Z",
+            "modified": "2023-03-29T20:21:44.368Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a4eac54b-b5b0-448b-84f6-53fb13145bd0",
+            "colId": "ca5df11c-5893-48a2-b7c3-5aeb8992372e",
+            "containerId": "7610d4d8-181e-4681-8241-c3f6171f75da",
+            "name": "Obter_Observacoes",
+            "url": "localhost:5000/lembretes/123456/observacoes?fruta=maca",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-04-05T19:24:41.351Z",
+            "modified": "2023-04-05T20:30:49.689Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "fruta",
+                    "value": "maca",
+                    "isPath": false
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1c3e4aa0-d3a7-4f65-b5da-31080c058361",
+            "colId": "ca5df11c-5893-48a2-b7c3-5aeb8992372e",
+            "containerId": "7610d4d8-181e-4681-8241-c3f6171f75da",
+            "name": "Salvar_Observacoes",
+            "url": "localhost:5000/lembretes/1/observacoes",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2023-04-05T20:25:30.133Z",
+            "modified": "2023-05-03T20:42:32.599Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"texto\": \"{{#string}}\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "01fd7ffd-ce0c-42c0-81d5-b4f0849732f7",
+            "colId": "ca5df11c-5893-48a2-b7c3-5aeb8992372e",
+            "containerId": "602d0de3-ae0b-44ea-a6c4-a6f599ed76be",
+            "name": "Obter_Base_Consolidada",
+            "url": "localhost:6000/lembretes",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-05-03T20:33:35.601Z",
+            "modified": "2023-05-03T20:33:54.535Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
