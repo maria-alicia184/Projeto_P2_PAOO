@@ -10,33 +10,33 @@ const observacoesPorLembreteId = {}
 const funcoes = {
     ObservacaoClassificada: (observacao) => {
         const observacoes = observacoesPorLembreteId[observacao.lembreteId]
-    const obsParaAtualizar = observacoes.find(o => o.id === observacao.id) //copia o status do observacoes p/ obsParaAtualizar
-    obsParaAtualizar.status = observacao.status
-    axios.post('http://localhost:10000/eventos', {
-        tipo: 'ObservacaoAtualizada',
-        dados: {
-            id: observacao.id,
-            texto: observacao.texto,
-            lembreteId: observacao.lembreteId,
-            status: observacao.status,
-            sentimento: observacao.sentimento
-        }
-    })
+        const obsParaAtualizar = observacoes.find(o => o.id === observacao.id) //copia o status do observacoes p/ obsParaAtualizar
+        obsParaAtualizar.status = observacao.status
+        axios.post('http://localhost:10000/eventos', {
+            tipo: 'ObservacaoAtualizada',
+            dados: {
+                id: observacao.id,
+                texto: observacao.texto,
+                lembreteId: observacao.lembreteId,
+                status: observacao.status,
+                sentimento: observacao.sentimento
+            }
+        })
     },
     ObservacaoAnalisada: (observacao) => {
         const observacoes = observacoesPorLembreteId[observacao.lembreteId]
-    const obsParaAtualizar = observacoes.find(o => o.id === observacao.id) //copia o sentimento do observacoes p/ obsParaAtualizar
-    obsParaAtualizar.sentimento = observacao.sentimento
-    axios.post('http://localhost:10000/eventos', {
-        tipo: 'ObservacaoAtualizada',
-        dados: {
-            id: observacao.id,
-            texto: observacao.texto,
-            lembreteId: observacao.lembreteId,
-            status: observacao.status,
-            sentimento: observacao.sentimento
-        }
-    })
+        const obsParaAtualizar = observacoes.find(o => o.id === observacao.id) //copia o sentimento do observacoes p/ obsParaAtualizar
+        obsParaAtualizar.sentimento = observacao.sentimento
+        axios.post('http://localhost:10000/eventos', {
+            tipo: 'ObservacaoAtualizada',
+            dados: {
+                id: observacao.id,
+                texto: observacao.texto,
+                lembreteId: observacao.lembreteId,
+                status: observacao.status,
+                sentimento: observacao.sentimento
+            }
+        })
     }
 }
 
@@ -73,7 +73,7 @@ app.post('/eventos', (req, res) => {
     res.status(200).send({msg: 'ok'})
     }
     catch(e){}
-    res.status(200).send({msg:'ok'})
+    //res.status(200).send({msg:'ok'})
 })
 
 const {MSS_OBSERVACOES_PORTA} = process.env

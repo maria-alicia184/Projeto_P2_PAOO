@@ -10,6 +10,8 @@ app.post('/eventos', (req, res) => {
     //{tipo}
     const evento = req.body
     console.log(evento)
+    //direcionando o evento para o mss de sentimentos
+    axios.post('http://127.0.0.1:8000/eventos', evento)
     //direcionando o evento para o mss de lembretes
     axios.post('http://localhost:4000/eventos', evento)
     //direcionando o evento para o mss de observacoes
@@ -19,7 +21,8 @@ app.post('/eventos', (req, res) => {
     //direcionando o evento para o mss de classificacao
     axios.post('http://localhost:7000/eventos', evento)
 
-    res.send(200).send({msg:'ok'})
+    res.status(200).send({msg:'ok'})
 })
 
 app.listen(BARRAMENTO_PORTA, () => {console.log(`Barramento.Porta ${BARRAMENTO_PORTA}`)})
+
